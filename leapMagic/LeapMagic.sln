@@ -1,0 +1,74 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fdrEngine", "..\fdrEngine\fdrEngine\fdrEngine.vcproj", "{D7980E30-D175-4009-981F-E792417F13B4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5C506C38-A48F-485A-B74D-E4124366D724} = {5C506C38-A48F-485A-B74D-E4124366D724}
+		{09A384AB-35E2-48AF-B63B-A531F6F28E63} = {09A384AB-35E2-48AF-B63B-A531F6F28E63}
+		{41DC29FD-76B1-4E7D-8691-88E40FF451B5} = {41DC29FD-76B1-4E7D-8691-88E40FF451B5}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "common", "..\common\common.vcproj", "{09A384AB-35E2-48AF-B63B-A531F6F28E63}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "smManagerLib", "..\fdrEngine\smManager\smManager.vcproj", "{41DC29FD-76B1-4E7D-8691-88E40FF451B5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5C506C38-A48F-485A-B74D-E4124366D724} = {5C506C38-A48F-485A-B74D-E4124366D724}
+		{09A384AB-35E2-48AF-B63B-A531F6F28E63} = {09A384AB-35E2-48AF-B63B-A531F6F28E63}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LeapMagic", "LeapMagic.vcproj", "{A9B9CED0-FF48-4E7E-99F8-5FDD7707DABC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D7980E30-D175-4009-981F-E792417F13B4} = {D7980E30-D175-4009-981F-E792417F13B4}
+		{5C506C38-A48F-485A-B74D-E4124366D724} = {5C506C38-A48F-485A-B74D-E4124366D724}
+		{09A384AB-35E2-48AF-B63B-A531F6F28E63} = {09A384AB-35E2-48AF-B63B-A531F6F28E63}
+		{41DC29FD-76B1-4E7D-8691-88E40FF451B5} = {41DC29FD-76B1-4E7D-8691-88E40FF451B5}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fileOperateLib", "..\fdrEngine\fileOperate\fileOperate.vcproj", "{5C506C38-A48F-485A-B74D-E4124366D724}"
+	ProjectSection(ProjectDependencies) = postProject
+		{09A384AB-35E2-48AF-B63B-A531F6F28E63} = {09A384AB-35E2-48AF-B63B-A531F6F28E63}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		myRelesase = myRelesase
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{D7980E30-D175-4009-981F-E792417F13B4}.Debug.ActiveCfg = Debug|Win32
+		{D7980E30-D175-4009-981F-E792417F13B4}.Debug.Build.0 = Debug|Win32
+		{D7980E30-D175-4009-981F-E792417F13B4}.myRelesase.ActiveCfg = myRelesase|Win32
+		{D7980E30-D175-4009-981F-E792417F13B4}.myRelesase.Build.0 = myRelesase|Win32
+		{D7980E30-D175-4009-981F-E792417F13B4}.Release.ActiveCfg = Release|Win32
+		{D7980E30-D175-4009-981F-E792417F13B4}.Release.Build.0 = Release|Win32
+		{09A384AB-35E2-48AF-B63B-A531F6F28E63}.Debug.ActiveCfg = Debug|Win32
+		{09A384AB-35E2-48AF-B63B-A531F6F28E63}.Debug.Build.0 = Debug|Win32
+		{09A384AB-35E2-48AF-B63B-A531F6F28E63}.myRelesase.ActiveCfg = myRelesase|Win32
+		{09A384AB-35E2-48AF-B63B-A531F6F28E63}.myRelesase.Build.0 = myRelesase|Win32
+		{09A384AB-35E2-48AF-B63B-A531F6F28E63}.Release.ActiveCfg = Release|Win32
+		{09A384AB-35E2-48AF-B63B-A531F6F28E63}.Release.Build.0 = Release|Win32
+		{41DC29FD-76B1-4E7D-8691-88E40FF451B5}.Debug.ActiveCfg = Debug|Win32
+		{41DC29FD-76B1-4E7D-8691-88E40FF451B5}.Debug.Build.0 = Debug|Win32
+		{41DC29FD-76B1-4E7D-8691-88E40FF451B5}.myRelesase.ActiveCfg = myRelesase|Win32
+		{41DC29FD-76B1-4E7D-8691-88E40FF451B5}.myRelesase.Build.0 = myRelesase|Win32
+		{41DC29FD-76B1-4E7D-8691-88E40FF451B5}.Release.ActiveCfg = Release|Win32
+		{41DC29FD-76B1-4E7D-8691-88E40FF451B5}.Release.Build.0 = Release|Win32
+		{A9B9CED0-FF48-4E7E-99F8-5FDD7707DABC}.Debug.ActiveCfg = Debug|Win32
+		{A9B9CED0-FF48-4E7E-99F8-5FDD7707DABC}.Debug.Build.0 = Debug|Win32
+		{A9B9CED0-FF48-4E7E-99F8-5FDD7707DABC}.myRelesase.ActiveCfg = Release|Win32
+		{A9B9CED0-FF48-4E7E-99F8-5FDD7707DABC}.myRelesase.Build.0 = Release|Win32
+		{A9B9CED0-FF48-4E7E-99F8-5FDD7707DABC}.Release.ActiveCfg = Release|Win32
+		{A9B9CED0-FF48-4E7E-99F8-5FDD7707DABC}.Release.Build.0 = Release|Win32
+		{5C506C38-A48F-485A-B74D-E4124366D724}.Debug.ActiveCfg = Debug|Win32
+		{5C506C38-A48F-485A-B74D-E4124366D724}.Debug.Build.0 = Debug|Win32
+		{5C506C38-A48F-485A-B74D-E4124366D724}.myRelesase.ActiveCfg = myRelesase|Win32
+		{5C506C38-A48F-485A-B74D-E4124366D724}.myRelesase.Build.0 = myRelesase|Win32
+		{5C506C38-A48F-485A-B74D-E4124366D724}.Release.ActiveCfg = Release|Win32
+		{5C506C38-A48F-485A-B74D-E4124366D724}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

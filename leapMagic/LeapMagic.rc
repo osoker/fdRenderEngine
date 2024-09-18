@@ -1,0 +1,196 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_LEAPMAGIC           ICON                    "LeapMagic.ico"
+IDI_SMALL               ICON                    "small.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_LEAPMAGIC MENU 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "退出(&X)",                    IDM_EXIT
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于(&A)...",                 IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_LEAPMAGIC ACCELERATORS 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 22, 17, 234, 229
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "命令控制台"
+FONT 12, "仿宋_GB2312", 400, 0, 0x86
+BEGIN
+    COMBOBOX        IDC_COMBOCMD,4,5,170,187,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "执行",IDC_BUTTONEXEC,184,5,45,12
+    GROUPBOX        "常用功能",IDC_STATIC,4,19,225,50
+    PUSHBUTTON      "插入怪物",IDC_BTN_INSERTMON,8,30,61,14
+    PUSHBUTTON      "播放上次技能",IDC_BTN_PLAYLASTSKILL,87,30,60,14
+    PUSHBUTTON      "调入执行命令集",IDC_BTN_EXECMDLIST,8,49,61,14
+    PUSHBUTTON      "存储碰撞信息",IDC_BTN_SAVECOLLINFO,161,30,60,14
+    PUSHBUTTON      "存储刷怪资料",IDC_BTN_SAVE_DEPLOYDATA,164,101,61,14
+    COMBOBOX        IDC_COMBO_AREALIST,77,82,78,114,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "部署当前区域",IDC_BTN_DEPLOY_CURAREA,164,80,61,14
+    LTEXT           "刷怪区域列表:",IDC_STATIC,8,84,57,10
+    PUSHBUTTON      "插入怪物",IDC_BTN_INSERT_MONSTER,8,101,61,14
+    COMBOBOX        IDC_COMBO_MONTYPE,77,102,78,81,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "触发矩离",IDC_CHECK_TRIGGER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,122,41,12
+    CONTROL         "主动视野",IDC_CHECK_VISION,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,50,122,42,12
+    CONTROL         "呼叫矩离",IDC_CHECK_CALL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,92,122,42,12
+    CONTROL         "逃跑矩离",IDC_CHECK_RUN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,134,122,42,12
+    PUSHBUTTON      "更改显示",IDC_BUTTON_CHNAGEDIS,177,120,48,14
+    GROUPBOX        "怪物刷新功能",IDC_STATIC,4,71,225,68
+    GROUPBOX        "怪物步幅编辑",IDC_STATIC,4,142,225,49
+    LTEXT           "正常移动间隔:",IDC_STATIC_MOVETIME,7,155,53,8
+    EDITTEXT        IDC_EDIT_MOVETIME,60,153,21,12,ES_AUTOHSCROLL
+    LTEXT           "怪物移动步幅:",IDC_STATIC_MOVETIME2,84,155,53,8
+    EDITTEXT        IDC_EDIT_STEPLENGTH,136,153,25,12,ES_AUTOHSCROLL
+    LTEXT           "ID:",IDC_STATIC,7,174,12,8
+    EDITTEXT        IDC_EDIT_MONSTERID,18,172,14,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_MONSTERNAME,34,172,75,142,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "怪物正常移动",IDC_CHECK_NORMALMOVE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,114,174,60,8
+    PUSHBUTTON      "查看怪物移动",IDC_BUTTON_SEEMONMOVE,174,170,53,15
+    PUSHBUTTON      "存储怪物信息",IDC_BUTTON_SAVEMONSTER,174,151,53,15
+    GROUPBOX        "静态",IDC_STATIC,4,192,225,29
+    LTEXT           "调整相机的FOV:",IDC_STATIC,6,204,59,12
+    EDITTEXT        IDC_EDIT_FOVMOD,61,202,39,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "执行修改",IDC_BUTTON_FOVMOD,102,202,50,12
+    EDITTEXT        IDC_EDIT_SEL1,153,203,11,11,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SEL2,164,203,12,11,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SEL3,176,203,12,11,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SEL4,188,203,12,11,ES_AUTOHSCROLL
+    PUSHBUTTON      "显示",IDC_BUTTON_DISEL,202,201,25,13
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 225
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "LeapMagic"
+    IDC_LEAPMAGIC           "LEAPMAGIC"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,209 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset134 \'cb\'ce\'cc\'e5;}{\f1\froman\fcharset0 Times New Roman;}{\f2\fmodern\fcharset134 \'d0\'c2\'cb\'ce\'cc\'e5;}}
+{\colortbl ;\red0\green0\blue255;\red0\green127\blue0;\red255\green0\blue255;\red255\green0\blue0;}
+{\*\generator Msftedit 5.41.15.1503;}\viewkind4\uc1\pard\nowidctlpar\qc\lang2052\kerning2\b\f0\fs32\'b5\'d8\'cd\'bc\'ce\'c4\'bc\'fe\'b8\'f1\'ca\'bd\lang1033\f1\par
+\pard\nowidctlpar\qj\lang2052\b0\f0\fs21\'d2\'d4\'cf\'c2\'ce\'aa\'b3\'a1\'be\'b0\'d6\'d0\'b5\'d8\'cd\'bc\'ce\'c4\'bc\'fe\'b5\'c4\'b8\'f1\'ca\'bd\'a3\'ba\lang1033\f1\par
+(\lang2052\f0\'d7\'a2\'a3\'ba\'a1\'a1\lang1033\f1 READ_MEM_OFF\lang2052\f0\'b2\'ce\'ca\'fd\'cb\'b5\'c3\'f7\'a3\'ba\lang1033\f1\par
+\pard\nowidctlpar\lang2052\f0\'ca\'be\'c0\'fd\'d3\'c3\'cd\'be\'a3\'ba\kerning0\fs22 READ_MEM_OFF( &t_byte,t_fstart,\cf1 sizeof\cf0 ( BYTE ) );\lang1033\kerning2\f1\fs21\par
+\pard\nowidctlpar\qj\lang2052\f0\'b5\'da\'d2\'bb\'b8\'f6\'b2\'ce\'ca\'fd\'a3\'ba\'b6\'c1\'c8\'eb\'ca\'fd\'be\'dd\'b5\'c4\'bd\'e1\'b9\'fb\'a1\'a3\lang1033\f1\par
+\lang2052\f0\'b5\'da\'b6\'fe\'b8\'f6\'b2\'ce\'ca\'fd\'a3\'ba\'b6\'c1\'c8\'eb\'b5\'c4\'d4\'b4\'ca\'fd\'be\'dd\'a1\'a3\lang1033\f1\par
+\lang2052\f0\'b5\'da\'c8\'fd\'b8\'f6\'b2\'ce\'ca\'fd\'a3\'ba\'d2\'aa\'b6\'c1\'c8\'eb\'ca\'fd\'be\'dd\'b5\'c4\'b4\'f3\'d0\'a1\'a1\'a3\lang1033\f1\par
+)\par
+\par
+\lang2052\f0\'a1\'a1\lang1033\f1\par
+\b 1: \lang2052\f0\'b5\'d8\'cd\'bc\'ce\'c4\'bc\'fe\'cd\'b7\lang1033\f1\par
+\lang2052\b0\f0\'ca\'fd\'c4\'bf\'a3\'ba\'a1\'a1\'a3\'b1\lang1033\f1\par
+\lang2052\f0\'b8\'f1\'ca\'bd\'a3\'ba\lang1033\f1\par
+\pard\nowidctlpar\cf2\lang2052\kerning0\f2\fs22 /** \\brief\par
+ *   \'b5\'d8\'cd\'bc\'ce\'c4\'bc\'fe\'cd\'b7s\par
+ */\par
+\cf1 struct\cf0\b  os_TGFileHeader\b0\par
+\{\par
+\b\tab\cf2\b0 //!\'ce\'c4\'bc\'fe\'b1\'ea\'ca\'b6\par
+\cf0\b\tab\cf1\b0 char\cf0\b\tab    m_cID[\cf3\b0 2\cf0 ];\par
+\b\tab\cf2\b0 //!\'ce\'c4\'bc\'fe\'c0\'e0\'d0\'cd\par
+\cf0\b\tab WORD\tab    m_wFileType;\b0\par
+\b\tab\cf2\b0 //!\'ce\'c4\'bc\'fe\'b0\'e6\'b1\'be\par
+\cf0\b\tab DWORD\tab    m_dwVersion;\b0\par
+\b\tab\cf2\b0 //!\'b5\'d8\'cd\'bc\'c3\'fb\par
+\cf0\b\tab CHAR\tab    m_strMapName[\cf3\b0 128\cf0 ];\par
+\par
+\b\tab\cf2\b0 //! \'d5\'e2\'b8\'f6\'d6\'b5\'d7\'f6\'ce\'aa\'c2\'df\'bc\'ad\'c9\'cf\'b5\'c4\'cb\'f7\'d2\'fd\'a3\'ac\'b0\'d164*64\'b5\'c4\'b5\'d8\'cd\'bc\'bf\'e9\'c6\'b4\'ba\'cf\'ce\'aa\'b8\'fc\'b4\'f3\'b5\'c4\'b5\'d8\'cd\'bc\'a1\'a3\par
+\cf0\b\tab LONG       m_vMapPos[\cf3\b0 2\cf0 ];\par
+\par
+\b\tab\cf2\b0 //!\'b0\'fc\'ba\'ac\'b6\'e0\'c9\'d9\'ce\'ef\'cc\'e5\'d4\'da\'b5\'d8\'cd\'bc\'c9\'cf\par
+\cf0\b\tab DWORD      m_dwObjectNum;\b0\par
+\par
+\b\tab DWORD      m_dwTexNum;\b0\par
+\b\tab\cf2\b0 //!\'b5\'d8\'cd\'bc\'b5\'da\'b6\'fe\'b2\'e3\'d2\'bb\'b9\'b2\'ca\'b9\'d3\'c3\'c1\'cb\'b6\'e0\'c9\'d9\'ce\'c6\'c0\'ed\par
+\cf0\b\tab DWORD      m_dwBackTexNum;\b0\par
+\par
+\};\par
+\par
+\b\'a3\'b2\'a3\'ba\'b5\'d8\'cd\'bc\'c9\'cf\'c5\'f6\'d7\'b2\'cf\'e0\'b9\'d8\'b5\'c4\'d0\'c5\'cf\'a2\'a1\'a3\par
+\kerning2\b0\f0\fs21\'ca\'fd\'c4\'bf\'a3\'ba\lang1033\f1 128*128\par
+\lang2052\f0\'b8\'f1\'ca\'bd\'a3\'ba\lang1033\f1\par
+\lang2052\kerning0\f2\fs22\par
+\cf2 /** \\brief\par
+ *  \'b8\'f1\'d7\'d3\'b5\'c4\'c5\'f6\'d7\'b2\'d0\'c5\'cf\'a2\'a1\'a3\par
+ *\par
+ *  \'ca\'b9\'d3\'c3\'d5\'e2\'b8\'f6\'b8\'f1\'d7\'d3\'c0\'b4\'d7\'e9\'d6\'af\'d5\'fb\'b8\'f6\'b3\'a1\'be\'b0\'b5\'c4\'c5\'f6\'d7\'b2\'cf\'e0\'b9\'d8\'d0\'c5\'cf\'a2\'a1\'a3\par
+ *  \par
+ */\par
+\cf1 struct\cf0\b  os_TileCollisionInfo\b0\par
+\{\par
+\par
+\b\tab\cf2\b0 //! \'b4\'fa\'b1\'ed\'b8\'f1\'d7\'d3\'c4\'dc\'b7\'f1\'cd\'a8\'b9\'fd\'a3\'ac 0\'ce\'aa\'cd\'a8\'b9\'fd\'a3\'ac1\'ce\'aa\'b2\'bb\'cd\'a8\'b9\'fd\par
+\cf0\b\tab\cf1\b0 bool\cf0\b      m_bHinder;\b0\par
+\par
+\b\tab\cf2\b0 //! \'b4\'fa\'b1\'ed\'b8\'f1\'d7\'d3\'b5\'c4\'b8\'df\'b6\'c8\'d6\'b5,\'d5\'e2\'b8\'f6\'b8\'df\'b6\'c8\'d6\'b5\'d4\'da\'b4\'e6\'b4\'a2\'b5\'c4\'ca\'b1\'ba\'f2\'ca\'c7\'ce\'ef\'cc\'e5\'b8\'df\'b6\'c8\'bc\'d3\'b5\'d8\'cd\'bc\'b5\'d8\'b1\'ed\'b8\'df\'b6\'c8\'d6\'b5.\par
+\cf0\b\tab\cf1\b0 float\cf0\b     m_fHeight;\b0\par
+\};\par
+\par
+\cf4\'d4\'a4\'b4\'a6\'c0\'ed\'c4\'da\'c8\'dd: m_fHeight\'d3\'a6\'b8\'c3\'cb\'f5\'d0\'a1\'ce\'aa\'d4\'ad\'c0\'b4\'b5\'c410\'b7\'d6\'d6\'ae\'d2\'bb,\'bc\'b4\'b3\'cb\'d2\'d40.1f.\par
+\cf0\par
+\b\'a3\'b3\'a3\'ba\'a1\'a1\'b5\'d8\'cd\'bc\'d6\'d0\'ce\'ef\'cc\'e5\'cf\'e0\'b9\'d8\'b5\'c4\'d0\'c5\'cf\'a2.\lang1033\kerning2\f1\fs21\par
+\pard\nowidctlpar\qj\lang2052\b0\f0\'ca\'fd\'c4\'bf\'a3\'ba\lang1033\f1   \lang2052\f0\'ce\'c4\'bc\'fe\'cd\'b7\'bd\'e1\'b9\'b9\'d6\'d0\'ca\'fd\'be\'dd\kerning0\b\f2\fs22 m_dwObjectNum\lang1033\kerning2\b0\f1\fs21\par
+\lang2052\f0\'b8\'f1\'ca\'bd\'a3\'ba\'a1\'a1\lang1033\f1\par
+\pard\nowidctlpar\lang2052\kerning0\f2\fs22\par
+\cf2 /** \\brief\par
+ *  \'b5\'d8\'cd\'bc\'c9\'cf\'ce\'ef\'cc\'e5\'b5\'c4\'d0\'c5\'cf\'a2\'a3\'ac\'b4\'cb\'b4\'a6\'d3\'c3\'b5\'bd\'b5\'c4\'d0\'c5\'cf\'a2\'ce\'aa\'e4\'d6\'c8\'be\'d3\'c3\'d0\'c5\'cf\'a2\'a1\'a3\par
+ *\par
+ */\par
+\cf1 struct\cf0\b  os_TGObject\b0\par
+\{\par
+\b   \cf2\b0 //!\'a1\'a1\'ce\'ef\'cc\'e5\'b5\'c4\'c3\'fb\'d7\'d6\par
+\cf0\b   \cf1\b0 char\cf0\b              m_szName[\cf3\b0 32\cf0 ];\par
+\par
+\b   \cf2\b0 //!\'a1\'a1\'ce\'ef\'cc\'e5\'b5\'c4\'ce\'bb\'d6\'c3\par
+\cf0\b   D3DXVECTOR2       m_poss;\b0\par
+\par
+\b   \cf2\b0 //!\'a1\'a1\'ce\'ef\'cc\'e5\'b5\'c4\'b8\'df\'b6\'c8\par
+\cf0\b   \cf1\b0 float\cf0\b\tab\tab\tab     m_fHeight;\b0\par
+\par
+\b   \cf2\b0 //! \'ce\'ef\'cc\'e5\'b5\'c4\'b7\'c5\'d6\'c3\'bd\'c7\'b6\'c8\par
+\cf0\b   \cf1\b0 float\cf0\b             m_fAngle;\b0\par
+\par
+\par
+\b   \cf2\b0 //!\'c3\'e6\'ca\'fd\'c1\'bf\par
+\cf0\b   DWORD            m_dwNumFace;\b0\par
+\b\tab\b0\par
+\b   \cf2\b0 //!\'b6\'a5\'b5\'e3\'ca\'fd\'c1\'bf\par
+\cf0\b   DWORD            m_dwNumVers;\b0\par
+\par
+\b   \cf2\b0 //! \'ce\'ef\'cc\'e5\'b5\'c4\'d6\'d0\'d0\'c4\'b5\'e3\par
+\cf0\b   osVec3D          m_vecCenter;\b0\par
+\par
+\par
+\b   \cf2\b0 //!\'ce\'ef\'cc\'e5\'b5\'c4\'ce\'c6\'c0\'ed\'ca\'fd\'c1\'bf\par
+\cf0\b   \cf1\b0 int\cf0\b              m_dwTexCount;\b0\par
+\par
+\b   \cf2\b0 /** \\brief\par
+   *   \'ce\'ef\'cc\'e5\'ca\'f4\'d0\'d4,\'b8\'f9\'be\'dd\'b2\'bb\'cd\'ac\'b5\'c4\'ce\'ef\'cc\'e5\'ca\'f4\'d0\'d4\'a3\'ac\'d7\'f6\'b3\'f6\'b2\'bb\'cd\'ac\'b5\'c4\'b4\'a6\'c0\'ed\'a1\'a3\par
+   * \par
+   *   \'c4\'bf\'c7\'b0\'b5\'c4\'bb\'ae\'b7\'d6\'ce\'aa\'a3\'ba\par
+   *    0: \'c6\'d5\'cd\'a8\'b5\'c4\'ce\'ef\'cc\'e5\'a1\'a3\par
+   *    1: \'b6\'af\'bb\'ad\'c0\'e0\'ce\'ef\'cc\'e5\'a1\'a3\par
+   *    2: \'cb\'ae\'cf\'e0\'b9\'d8\'b5\'c4\'ce\'ef\'cc\'e5\'a1\'a3\par
+   *    3: billBoard\'cf\'e0\'b9\'d8\'b5\'c4\'ce\'ef\'c6\'b7\'a1\'a3\par
+   *    4: \'cc\'d8\'d0\'a7\'b6\'af\'bb\'ad\'a1\'a3\'be\'cd\'ca\'c7\'ce\'d2\'c3\'c7\'d7\'d4\'bc\'ba\'b8\'f1\'ca\'bd\'b5\'c4\'b9\'d8\'bc\'fc\'d6\'a1\'b6\'af\'bb\'ad\'a1\'a3\par
+   *    5: \'c1\'a3\'d7\'d3\'b6\'af\'bb\'ad\'b5\'c4\'cc\'d8\'d0\'a7\'c0\'e0\'d0\'cd\'a1\'a3\'b3\'a1\'be\'b0\'d6\'d0\'bf\'c9\'d2\'d4\'b7\'c5\'d6\'c3\'b9\'cc\'b6\'a8\'b5\'c4\'c1\'a3\'d7\'d3\'b6\'af\'bb\'ad\'a1\'a3\par
+   */\par
+\cf0\b   DWORD\tab           m_dwType;\b0\par
+\par
+\par
+\b   \cf2\b0 /** \\brief\par
+   *  River\'bc\'d3\'c8\'eb\'d3\'b0\'cf\'ec\'b5\'b1\'c7\'b0\'ce\'ef\'c6\'b7\'b5\'c4\'bb\'b7\'be\'b3\'b9\'e2\'a1\'a3\par
+   *\par
+   *  \'d5\'e2\'b8\'f6\'b9\'e2\'b8\'f9\'be\'dd\'b5\'b1\'c7\'b0\'ce\'ef\'c6\'b7\'cb\'f9\'d4\'da\'b8\'f1\'d7\'d3\'b5\'c4\'d1\'d5\'c9\'ab\'c0\'b4\'b5\'c3\'b5\'bd\'a3\'ac\'d4\'da\'b1\'e0\'bc\'ad\'c6\'f7\'d3\'d0\'d1\'a1\'cf\'ee\par
+   *  \'bf\'c9\'d2\'d4\'b6\'d4\'c4\'b3\'d0\'a9\'ce\'ef\'c6\'b7\'b2\'bb\'ca\'b9\'d3\'c3\'bb\'b7\'be\'b3\'b9\'e2\'a1\'a3\par
+   */\par
+\cf0\b   DWORD          m_dwAmbientLight;\b0\par
+\par
+\par
+\pard\nowidctlpar\qj\};\par
+\par
+\b\'a3\'b4\'a3\'ba\'ce\'c6\'c0\'ed\'cf\'e0\'b9\'d8\'b5\'c4\'d0\'c5\'cf\'a2\'a1\'a3\par
+\b0\'b5\'da\'d2\'bb\'b2\'e3\'ce\'c6\'c0\'ed\'a3\'ba\par
+\kerning2\f0\fs21\'ca\'fd\'c4\'bf\'a3\'ba\'ce\'c4\'bc\'fe\'cd\'b7\'bd\'e1\'b9\'b9\'d6\'d0\kerning0\f2\fs22 m_dwTexNum  \lang1033\kerning2\f1\fs21\par
+\lang2052\f0\'b8\'f1\'ca\'bd\'a3\'ba\'a1\'a1\lang1033\f1\par
+\lang2052\f0 32\'b8\'f6\'d7\'d6\'bd\'da\'b5\'c4char\lang1033\f1\par
+\par
+\lang2052\f0\'b5\'da\'b6\'fe\'b2\'e3\'ce\'c6\'c0\'ed\'a3\'ba\lang1033\f1\par
+\lang2052\f0\'ca\'fd\'c4\'bf\'a3\'ba\'ce\'c4\'bc\'fe\'cd\'b7\'bd\'e1\'b9\'b9\'d6\'d0\kerning0\f2\fs22 m_btBackTileTexNum\par
+\'b8\'f1\'ca\'bd\'a3\'ba\par
+32\'b8\'f6\'d7\'d6\'bd\'da\'b5\'c4char\par
+\par
+\par
+\'c3\'bf\'d2\'bb\'b5\'d8\'cd\'bc\'b8\'f1\'d7\'d3\'b6\'d4\'d3\'a6\'b5\'c4\'ce\'c6\'c0\'ed\'d0\'c5\'cf\'a2:\par
+\'ca\'fd\'c4\'bf\'a3\'ba64*64\par
+\'b8\'f1\'ca\'bd\'a3\'ba\par
+\pard\nowidctlpar\cf2 /** \\brief\par
+ *  \'c3\'bf\'d2\'bb\'b8\'f6\'b5\'d8\'cd\'bc\'b8\'f1\'d7\'d3\'d3\'c3\'b5\'bd\'b5\'c4\'ce\'c6\'c0\'ed\'cb\'f7\'d2\'fd,\'ce\'c6\'c0\'ed\'cb\'f7\'d2\'fd\'ba\'cd\'cf\'b8\'bd\'da\'ce\'c6\'c0\'ed\'cb\'f7\'d2\'fd.\par
+ *  \'d2\'d4\'ba\'f3\'d0\'de\'b8\'c4\'b5\'d8\'cd\'bc\'b8\'f1\'ca\'bd,\'d6\'b1\'bd\'d3\'d0\'b4\'c8\'eb\'b5\'bd\'e4\'d6\'c8\'be\'ca\'fd\'be\'dd\'d6\'d0\'c8\'a5.\par
+ */\par
+\cf1 struct\cf0\b  os_texIdx\b0\par
+\{\par
+\b\tab\cf1\b0 int\cf0\b    m_iTexIdx;\tab\b0\par
+\b\tab\cf1\b0 int\cf0\b    m_iDetailIdx;\b0\par
+\};\par
+\pard\nowidctlpar\qj\par
+\par
+\cf4\b\'bd\'d3\'cf\'c2\'c0\'b4\'d3\'d0\'d2\'bb\'bf\'e9\'ce\'de\'d3\'c3\'b5\'c4\'d0\'c5\'cf\'a2:\par
+\pard\nowidctlpar\cf0\b0\f0\tab\cf2 //\par
+\cf0\tab\cf2 // \par
+\cf0\tab\cf2 // \'b6\'c1\'c8\'a1\'b5\'d8\'cd\'bc\'d3\'c3\'b5\'bd\'b5\'c4\'ce\'c6\'c0\'ed\'b5\'c4\'d0\'c5\'cf\'a2\'a1\'a3\'b6\'d4\'d2\'fd\'c7\'e6\'c0\'b4\'cb\'b5,\'d5\'e2\'d0\'a9\'ca\'fd\'be\'dd\'c3\'bb\'d3\'d0\'d3\'c3\'b4\'a6.\par
+\cf0\tab READ_MEM_OFF( &t_byte,t_\tab ,\cf1 sizeof\cf0 ( BYTE ) );\par
+\tab\cf1 for\cf0 ( \cf1 int\cf0  t_i=\cf3 0\cf0 ;t_i<t_byte;t_i++ )\par
+\tab\{\par
+\tab\tab READ_MEM_OFF( &t_byte1,t_fstart,\cf1 sizeof\cf0 ( BYTE ) );\par
+\tab\tab READ_MEM_OFF( t_str,t_fstart,\cf1 sizeof\cf0 ( \cf1 char\cf0  )*\cf3 9\cf0  );\par
+\tab\tab t_str[\cf3 9\cf0 ] = NULL;\par
+\tab\}\par
+\par
+\tab READ_MEM_OFF( &t_byte,t_fstart,\cf1 sizeof\cf0 ( BYTE ) );\par
+\tab\cf1 for\cf0 ( \cf1 int\cf0  t_i=\cf3 0\cf0 ;t_i<t_byte;t_i++ )\par
+\tab\{\par
+\tab\tab READ_MEM_OFF( &t_byte1,t_fstart,\cf1 sizeof\cf0 ( BYTE ) );\par
+\tab\tab READ_MEM_OFF( t_str,t_fstart,\cf1 sizeof\cf0 ( \cf1 char\cf0  )*\cf3 10\cf0  );\par
+\tab\tab t_str[\cf3 10\cf0 ] = NULL;\par
+\tab\}\par
+\pard\nowidctlpar\qj\cf4\f2\'d4\'a4\'b4\'a6\'c0\'ed\'c4\'da\'c8\'dd:\'b0\'d1\'d5\'e2\'d2\'bb\'bf\'e9\'ce\'de\'d3\'c3\'b5\'c4\'d0\'c5\'cf\'a2\'c8\'a5\'b5\'f4.\par
+\cf0\par
+\lang1033\kerning2\f1\fs21\par
+\lang2052\b\f0\'a3\'b5\'a3\'ba\'c3\'bf\'d2\'bb\'b8\'f6\'b5\'d8\'cd\'bc\'b8\'f1\'d7\'d3\'b8\'f1\'d7\'d3\'c9\'cf\'ce\'ef\'c6\'b7\'b5\'c4\'cf\'e0\'b9\'d8\'ca\'fd\'be\'dd\'a3\'ba\lang1033\f1\par
+\pard\nowidctlpar\lang2052\kerning0\b0\f2\fs22\par
+\cf2 /** \\brief\par
+ *  \'d2\'fd\'c7\'e6\'d6\'d0\'c3\'bf\'d2\'bb\'b8\'f6\'b8\'f1\'d7\'d3\'b5\'c4\'d0\'c5\'cf\'a2\'a1\'a3\par
+ *  \par
+ */\par
+\cf1 struct\cf0\b  os_TileInfo\b0\par
+\{\par
+\b\tab\cf2\b0 //! \'b8\'f1\'d7\'d3\'b5\'c4\'b8\'df\'b6\'c8\'a1\'a3\par
+\cf0\b\tab CHAR\tab\tab\tab m_cHeight;\b0\par
+\par
+\b\tab\cf2\b0 //! \'bb\'f9\'b4\'a1\'cd\'bc\'bf\'e9\'b5\'c4\'cb\'f7\'d2\'fd\'ba\'cd\'d7\'f8\'b1\'ea\'a1\'a3\'a1\'a1\par
+\cf0\b\tab BYTE\tab\tab\tab m_btTileIndex;\b0\par
+\b\tab BYTE\tab\tab\tab m_btTileCoord;\b0\par
+\par
+\b\tab\cf2\b0 //! \'cf\'b8\'bd\'da\'cc\'f9\'cd\'bc\'b5\'c4\'cb\'f7\'d2\'fd\'ba\'cd\'d7\'f8\'b1\'ea\'a1\'a3\par
+\cf0\b\tab BYTE\tab\tab\tab m_btBackTileIndex;\b0\par
+\b\tab BYTE\tab\tab\tab m_btBackTileCoord;\b0\par
+\par
+\b\tab\cf2\b0 //! \'b8\'f1\'d7\'d3\'b5\'c4\'b6\'a5\'b5\'e3\'c9\'ab.\par
+\cf0\b\tab DWORD\tab\tab\tab m_dwBaseColor;\b0\par
+\par
+\b\tab\cf2\b0 //! \'b5\'b1\'c7\'b0\'b8\'f1\'d7\'d3\'ca\'b9\'d3\'c3\'ce\'ef\'cc\'e5\'b5\'c4\'cb\'f7\'d2\'fd\'a3\'ac\'c8\'e7\'b9\'fb\'c9\'cf\'c3\'e6\'c3\'bb\'d3\'d0\'ce\'ef\'c6\'b7\'a3\'ac\'cb\'f7\'d2\'fd\'d6\'b5\'ce\'aa-1. \par
+\cf0\b\tab\cf1\b0 int\cf0\b             m_dwObjIndex[MAXOBJNUM_PERTILE];\b0\par
+\par
+\};\par
+\pard\nowidctlpar\qj MAXOBJNUM_PERTILE\'b5\'c4\'ca\'fd\'c4\'bf\'ce\'aa3.\par
+\b\par
+\f0 6: \'c3\'bf\'d2\'bb\'b8\'f1\'d7\'d3\'b5\'c4\'ca\'f4\'d0\'d4\'ca\'fd\'be\'dd.\lang1033\kerning2\b0\f1\fs21\par
+\lang2052\f0\'ca\'fd\'c4\'bf\lang1033\f1 : 64*64.\par
+\lang2052\f0\'b8\'f1\'ca\'bd\lang1033\f1 : BYTE\lang2052\f0\'d0\'cd\'ca\'fd\'be\'dd\lang1033\f1 .\par
+\par
+\cf4\par
+\pard\nowidctlpar\qc\cf0\b\fs32\par
+\pard\kerning0\b0\fs20\par
+}
+ 

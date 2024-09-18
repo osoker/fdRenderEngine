@@ -1,0 +1,251 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_BUG_COMMIT DIALOGEX 0, 0, 587, 391
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Bug Commit"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "关闭",IDCANCEL,529,370,50,14,WS_DISABLED
+    CONTROL         "",IDC_TAB1,"SysTabControl32",TCS_TOOLTIPS,7,6,572,12
+END
+
+IDD_ADD_BUG DIALOGEX 0, 0, 446, 342
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_NOINHERITLAYOUT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_BUG_TIME,42,6,108,12,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_GAME_NAME,42,24,72,12,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_GAME_VERSION,42,42,72,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_BUG_NAME,42,60,72,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_SEVERITY_LIST,42,79,72,77,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_LOCATION_LIST,42,186,72,72,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "<无>",IDC_RELATION_BUG,42,306,72,12,WS_DISABLED
+    COMBOBOX        IDC_REPRO_LIST,204,6,114,54,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "选择出错生成的log文件",IDC_LOG_BUTTON,132,23,306,15,
+                    WS_DISABLED
+    EDITTEXT        IDC_BUG_DESC,131,52,300,102,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_STEP,288,180,138,36,ES_MULTILINE | ES_AUTOHSCROLL
+    PUSHBUTTON      "<+++",IDC_ADD_STEP,252,204,30,12
+    PUSHBUTTON      "<---",IDC_INSERT_STEP,252,180,30,12
+    PUSHBUTTON      ">>",IDC_DEL_STEP,252,228,30,12
+    DEFPUSHBUTTON   "提交bug",IDC_COMMIT_BUG,388,306,50,14
+    CONTROL         "Bug时间:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,6,10,
+                    32,8
+    CONTROL         "Bug名称:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,5,63,
+                    36,8
+    CONTROL         "游戏名称:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,2,
+                    27,36,8
+    CONTROL         "版本号:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,6,44,
+                    29,8
+    CONTROL         "严重程度:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,3,
+                    81,36,8
+    LTEXT           "<没有选择，不能提交bug>",IDC_SEVERITY_INTERPRET,7,94,
+                    109,78
+    CONTROL         "出现位置:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,4,
+                    189,36,8
+    CONTROL         "相关Bug:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,6,
+                    306,36,8
+    LTEXT           "<没有选择，不能提交bug>",IDC_LOCATION_INTERPRET,6,204,
+                    108,90
+    GROUPBOX        "描述:",IDC_STATIC,126,42,312,120
+    GROUPBOX        "重现步骤:",IDC_STATIC,126,168,312,78
+    CONTROL         "重现机率:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,156,
+                    6,36,8
+    LISTBOX         IDC_STEP_LIST,130,180,116,60,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_BUG_LIST DIALOGEX 0, 0, 583, 342
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+EXSTYLE WS_EX_NOINHERITLAYOUT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_BUG_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,7,40,568,295
+    COMBOBOX        IDC_TIME_FILTER_LIST,207,6,54,84,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "时间段:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,177,8,
+                    30,8
+    CONTROL         "提交人:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,7,9,
+                    30,8
+    COMBOBOX        IDC_OWNER_FILTER_LIST,36,6,138,84,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "全部显示",IDC_DISPLAY_ALL,539,25,36,12
+    CONTROL         "严重程度:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,268,
+                    8,36,8
+    COMBOBOX        IDC_SEVERITY_FILTER_LIST,309,6,63,84,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Bug状态:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,272,
+                    25,32,8
+    COMBOBOX        IDC_FILTER_BUG_STATE,309,24,63,66,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_FILTER_STRING,36,24,102,12,ES_AUTOHSCROLL | 
+                    ES_WANTRETURN
+    CONTROL         "搜索:",IDC_STATIC,"Static",SS_SIMPLE | WS_GROUP,15,27,
+                    20,8
+    PUSHBUTTON      "搜索",IDC_FILTER_STRING_BUT,144,24,30,12
+    PUSHBUTTON      "统计Bug",IDC_STATISTIC_BUT,539,7,36,12
+END
+
+IDD_INTERPRET_DLG DIALOGEX 0, 0, 186, 103
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "确定",IDOK,7,82,50,14
+    DEFPUSHBUTTON   "取消",IDCANCEL,129,82,50,14
+    EDITTEXT        IDC_INTERPRET,7,18,172,60,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_WANTRETURN
+    LTEXT           "说明：",IDC_STATIC,7,7,66,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_BUG_COMMIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 579
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 384
+    END
+
+    IDD_ADD_BUG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 438
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 335
+    END
+
+    IDD_BUG_LIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 575
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 335
+    END
+
+    IDD_INTERPRET_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_QA_MENU MENU 
+BEGIN
+    POPUP "QA"
+    BEGIN
+        MENUITEM "查看Bug详情",                 ID_CHECK_BUG
+        MENUITEM SEPARATOR
+        MENUITEM "[Fixed OK]",                  ID_QA_FIXED_OK
+        MENUITEM "清除所有Bug标志",             ID_QA_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "帮助",                        ID_BUG_COMMIT_HELP
+    END
+END
+
+IDR_FIXER MENU 
+BEGIN
+    POPUP "Fix"
+    BEGIN
+        MENUITEM "查看Bug详情",                 ID_CHECK_BUG
+        MENUITEM SEPARATOR
+        MENUITEM "[Fixed]",                     ID_FIX_FIXED
+        MENUITEM "[Not A Bug]",                 ID_FIX_NAB
+        MENUITEM "[Will Not Fix]",              ID_FIX_WNF
+        MENUITEM SEPARATOR
+        MENUITEM "帮助",                        ID_BUG_COMMIT_HELP
+    END
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
